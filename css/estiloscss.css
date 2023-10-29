@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+::selection {
+  color: #e44400;
+  background-color: #a1a1a1; }
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "M PLUS Rounded 1c", sans-serif; }
+
+html {
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+body {
+  background-color: #151515; }
+
+/* header */
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0.5em 2em;
+  background-color: rgba(0, 0, 0, 0.888); }
+  header h1 {
+    color: #e44400; }
+  header nav {
+    display: flex;
+    /* boton tineda */ }
+    header nav a {
+      font-size: 1em;
+      color: #a1a1a1;
+      padding: 0.4em; }
+    header nav button {
+      font-size: 1em;
+      color: #a1a1a1;
+      font-family: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      position: relative;
+      border: none;
+      background: none;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color; }
+      header nav button span {
+        font-style: italic;
+        color: #e44400; }
+    header nav button:focus,
+    header nav button:hover {
+      color: #fff; }
+    header nav button:focus:after,
+    header nav button:hover:after {
+      width: 100%;
+      left: 0%; }
+    header nav button:after {
+      content: "";
+      pointer-events: none;
+      bottom: -2px;
+      left: 50%;
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #fff;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: width, left; }
+  header a:hover {
+    color: #fff; }
+
+/* hero */
+#portada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 95vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.557), rgba(0, 0, 0, 0.453)), url(../archivos/portada.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  #portada h2 {
+    color: white;
+    font-size: 4em;
+    text-shadow: 2px 2px 10px black; }
+
+/* actividades */
+#actividades {
+  color: #fff;
+  padding: 1.5em; }
+  #actividades .titulo-actividades {
+    display: flex;
+    align-items: center; }
+    #actividades .titulo-actividades h2 {
+      color: #e44400; }
+    #actividades .titulo-actividades img {
+      padding: 0.5em; }
+  #actividades h3 {
+    color: #326ecf;
+    text-shadow: 2px 2px 10px black; }
+  #actividades p {
+    margin-bottom: 1em; }
+
+/* horarios */
+#horarios {
+  color: #fff;
+  padding: 1.5em; }
+  #horarios h2 {
+    color: #e44400; }
+  #horarios strong {
+    color: #326ecf; }
+  #horarios .titulo-horarios {
+    display: flex;
+    align-items: center; }
+    #horarios .titulo-horarios img {
+      margin-left: 0.5em; }
+  #horarios .semana {
+    display: flex;
+    flex-wrap: wrap; }
+    #horarios .semana .dia {
+      margin: 0.5em;
+      padding: 0.5em;
+      border-left: 2px solid #326ecf; }
+
+/* planes */
+#planes {
+  color: #fff;
+  padding: 1.5em; }
+  #planes .titulo-planes {
+    display: flex;
+    align-items: center; }
+    #planes .titulo-planes h2 {
+      color: #e44400; }
+    #planes .titulo-planes img {
+      padding: .5em; }
+  #planes ul {
+    margin: 0.5em;
+    padding: 0.5em;
+    border-left: 2px solid #326ecf; }
+
+/* consejos */
+#consejos {
+  color: #fff;
+  padding: 1.5em; }
+  #consejos .titulo-consejos {
+    display: flex;
+    align-items: center; }
+    #consejos .titulo-consejos h2 {
+      color: #e44400; }
+    #consejos .titulo-consejos img {
+      padding: .5em; }
+
+/* novedades */
+#novedades {
+  color: #fff;
+  padding: 1.5em; }
+  #novedades .titulo-novedades {
+    display: flex;
+    align-items: center; }
+    #novedades .titulo-novedades h2 {
+      color: #e44400; }
+    #novedades .titulo-novedades img {
+      padding: 0.5em; }
+
+.enlace {
+  color: #e44400;
+  font-style: italic;
+  font-weight: bold; }
+
+/* contacto */
+#contacto {
+  padding: 1.5em; }
+  #contacto h2 {
+    color: #e44400; }
+  #contacto .titulo-mapa {
+    display: flex;
+    align-items: center; }
+    #contacto .titulo-mapa h3 {
+      color: #326ecf;
+      font-size: 1.5rem; }
+  #contacto iframe {
+    width: 40vw; }
+  #contacto .fightfit-ig {
+    color: #326ecf; }
+    #contacto .fightfit-ig p {
+      font-size: 1.5rem;
+      font-weight: bold; }
+    #contacto .fightfit-ig a {
+      font-size: 3rem;
+      margin: 0 0.3rem; }
+    #contacto .fightfit-ig .instagram {
+      color: #ffffff; }
+    #contacto .fightfit-ig .facebook {
+      color: #ffffff; }
+
+/* footer */
+footer {
+  text-align: center;
+  color: #a1a1a1;
+  margin-bottom: 10px; }
+
+/* media Q */
