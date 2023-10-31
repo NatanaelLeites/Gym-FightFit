@@ -31,52 +31,59 @@ header {
   justify-content: space-between;
   width: 100vw;
   padding: 0.5em 2em;
-  background-color: rgba(0, 0, 0, 0.888); }
+  background-color: #000000e2; }
   header h1 {
     color: #e44400; }
   header nav {
     display: flex;
-    /* boton tineda */ }
-    header nav a {
-      font-size: 1em;
-      color: #a1a1a1;
-      padding: 0.4em; }
-    header nav button {
-      font-size: 1em;
-      color: #a1a1a1;
-      font-family: inherit;
-      font-weight: 800;
-      cursor: pointer;
-      position: relative;
-      border: none;
-      background: none;
-      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition-duration: 400ms;
-      transition-property: color; }
-      header nav button span {
-        font-style: italic;
-        color: #e44400; }
-    header nav button:focus,
-    header nav button:hover {
+    align-items: center; }
+    header nav .links {
+      /* boton tineda */ }
+      header nav .links a {
+        font-size: 1em;
+        color: #a1a1a1;
+        padding: 0.2rem;
+        transition: all 400ms; }
+      header nav .links button {
+        font-size: 1em;
+        color: #a1a1a1;
+        font-family: inherit;
+        font-weight: 800;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        background: none;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: color; }
+        header nav .links button span {
+          font-style: italic;
+          color: #e44400; }
+      header nav .links button:focus,
+      header nav .links button:hover {
+        color: #fff; }
+      header nav .links button:focus:after,
+      header nav .links button:hover:after {
+        width: 100%;
+        left: 0%; }
+      header nav .links button:after {
+        content: "";
+        pointer-events: none;
+        bottom: -2px;
+        left: 50%;
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: #fff;
+        transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition-duration: 400ms;
+        transition-property: width, left; }
+    header nav a:hover {
       color: #fff; }
-    header nav button:focus:after,
-    header nav button:hover:after {
-      width: 100%;
-      left: 0%; }
-    header nav button:after {
-      content: "";
-      pointer-events: none;
-      bottom: -2px;
-      left: 50%;
-      position: absolute;
-      width: 0%;
-      height: 2px;
-      background-color: #fff;
-      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-      transition-duration: 400ms;
-      transition-property: width, left; }
-  header a:hover {
-    color: #fff; }
+  header #btn__menu {
+    color: #a1a1a1;
+    font-size: 2rem;
+    display: none; }
 
 /* hero */
 #portada {
@@ -97,7 +104,8 @@ header {
 /* actividades */
 #actividades {
   color: #fff;
-  padding: 1.5em; }
+  padding: 1.5em;
+  padding-top: 60px; }
   #actividades .titulo-actividades {
     display: flex;
     align-items: center; }
@@ -114,7 +122,8 @@ header {
 /* horarios */
 #horarios {
   color: #fff;
-  padding: 1.5em; }
+  padding: 1.5em;
+  padding-top: 60px; }
   #horarios h2 {
     color: #e44400; }
   #horarios strong {
@@ -135,7 +144,8 @@ header {
 /* planes */
 #planes {
   color: #fff;
-  padding: 1.5em; }
+  padding: 1.5em;
+  padding-top: 60px; }
   #planes .titulo-planes {
     display: flex;
     align-items: center; }
@@ -151,7 +161,8 @@ header {
 /* consejos */
 #consejos {
   color: #fff;
-  padding: 1.5em; }
+  padding: 1.5em;
+  padding-top: 60px; }
   #consejos .titulo-consejos {
     display: flex;
     align-items: center; }
@@ -159,6 +170,8 @@ header {
       color: #e44400; }
     #consejos .titulo-consejos img {
       padding: .5em; }
+  #consejos h3 {
+    color: #326ecf; }
 
 /* novedades */
 #novedades {
@@ -171,6 +184,8 @@ header {
       color: #e44400; }
     #novedades .titulo-novedades img {
       padding: 0.5em; }
+  #novedades h4 {
+    color: #326ecf; }
 
 .enlace {
   color: #e44400;
@@ -209,4 +224,31 @@ footer {
   color: #a1a1a1;
   margin-bottom: 10px; }
 
-/* media Q */
+/* media queries */
+@media (max-width: 768px) {
+  header nav {
+    position: relative; }
+    header nav .links {
+      background-color: #000000f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      overflow: hidden;
+      /* height: 0; */
+      width: 50vw;
+      opacity: 0;
+      padding: 1rem;
+      top: 3rem;
+      right: .1rem;
+      transition: all 400ms; }
+    header nav .links.activo {
+      /* height: auto; */
+      opacity: 1; }
+    header nav #btn__menu {
+      display: block;
+      transition: 400ms;
+      cursor: pointer; }
+    header nav #btn__menu.rotate {
+      color: #e44400;
+      transform: rotate(-180deg); } }
