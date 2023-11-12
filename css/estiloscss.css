@@ -8,8 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-family: "M PLUS Rounded 1c", sans-serif; }
+  border: 0; }
 
 html {
   scroll-behavior: smooth; }
@@ -21,7 +20,8 @@ li {
   list-style-type: none; }
 
 body {
-  background-color: #151515; }
+  background-color: #151515;
+  font-family: 'Roboto', sans-serif; }
 
 /* header */
 header {
@@ -33,7 +33,9 @@ header {
   padding: 0.5em 2em;
   background-color: #000000e2; }
   header h1 {
-    color: #e44400; }
+    color: #e44400;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif; }
   header nav {
     display: flex;
     align-items: center; }
@@ -100,6 +102,8 @@ header {
   #portada h2 {
     color: white;
     font-size: 4em;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif;
     text-shadow: 2px 2px 10px black; }
   #portada img {
     width: 45vw;
@@ -229,7 +233,7 @@ footer {
   margin-bottom: 10px; }
 
 /* media queries */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: landscape) {
   header nav {
     height: 2rem; }
     header nav .links {
@@ -257,7 +261,7 @@ footer {
     display: flex;
     flex-direction: column; }
     #portada img {
-      width: 95%; }
+      display: none; }
   #contacto iframe {
     width: 100%; } }
 

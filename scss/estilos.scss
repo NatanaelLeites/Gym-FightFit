@@ -15,7 +15,6 @@ $color-subtitulos: #326ecf;
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 html {
@@ -32,6 +31,7 @@ li {
 
 body {
   background-color: rgb(21, 21, 21);
+  font-family: 'Roboto', sans-serif;
 }
 
 /* header */
@@ -46,6 +46,8 @@ header {
 
   h1 {
     color: $color-principal;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif;
   }
 
   nav {
@@ -136,12 +138,15 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
 
-  h2{
+  h2 {
     color: white;
     font-size: 4em;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif;
     text-shadow: 2px 2px 10px black;
   }
-  img{
+
+  img {
     width: 45vw;
     cursor: pointer;
   }
@@ -346,7 +351,7 @@ footer {
 
 /* media queries */
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: landscape) {
   header {
     nav {
       height: 2rem;
@@ -383,11 +388,12 @@ footer {
     }
   }
 
-  #portada{
+  #portada {
     display: flex;
     flex-direction: column;
-    img{
-      width: 95%;
+
+    img {
+      display: none;
     }
   }
 
@@ -400,16 +406,19 @@ footer {
 }
 
 @media (max-width: 320px) {
-  header{
+  header {
     width: 100%;
     padding: 0 .2em;
-    nav{
+
+    nav {
       width: 100%;
-      .links{
+
+      .links {
         padding: 0.5em;
         width: 100%;
-        
+
       }
+
       .links.activo {
         margin-top: 60px;
       }
