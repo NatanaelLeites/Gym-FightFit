@@ -147,7 +147,7 @@ header {
   }
 
   img {
-    width: 45vw;
+    width: 50%;
     cursor: pointer;
   }
 }
@@ -351,7 +351,7 @@ footer {
 
 /* media queries */
 
-@media (max-width: 768px) and (orientation: landscape) {
+@media (max-width: 768px) {
   header {
     nav {
       height: 2rem;
@@ -393,7 +393,9 @@ footer {
     flex-direction: column;
 
     img {
-      display: none;
+      width: 80%;
+      max-height: 150px;
+      object-fit: cover;
     }
   }
 
@@ -423,5 +425,11 @@ footer {
         margin-top: 60px;
       }
     }
+  }
+}
+
+@media (orientation: landscape) {
+  #portada{
+    padding-top: 45px;
   }
 }
