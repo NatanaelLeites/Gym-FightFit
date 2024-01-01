@@ -4,3 +4,4 @@ btnMenu.addEventListener('click', ()=>{
     btnMenu.classList.toggle('rotate')
     menu.classList.toggle('activo')
 })
+
