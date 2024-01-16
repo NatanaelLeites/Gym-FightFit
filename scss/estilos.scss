@@ -349,6 +349,49 @@ footer {
   margin-bottom: 10px;
 }
 
+/* tienda */
+.container{
+  padding-top: 4rem;
+  h3{
+    color: $color-subtitulos;
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  .lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1.5rem ;
+    .card{
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: $color-secundario;
+      img{
+        height: 80%;
+        transition: .3s;
+      }
+      img:hover{
+        transform: scale(1.05);
+      }
+      h4{
+        color: $color-subtitulos;
+        background-color: #ffffff;
+        text-transform: capitalize;
+      }
+      button{
+        cursor: pointer;
+        height: 2rem;
+        width: 100%;
+        border: unset;
+
+        background-color:$color-principal;
+      }
+    }
+  }
+}
 /* media queries */
 
 @media (max-width: 768px) {

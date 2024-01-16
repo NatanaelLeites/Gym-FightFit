@@ -232,6 +232,41 @@ footer {
   color: #a1a1a1;
   margin-bottom: 10px; }
 
+/* tienda */
+.container {
+  padding-top: 4rem; }
+  .container h3 {
+    color: #326ecf;
+    font-size: 1.5rem;
+    padding: 0 1.5rem; }
+  .container .lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1.5rem; }
+    .container .lista .card {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background-color: #a1a1a1; }
+      .container .lista .card img {
+        height: 80%;
+        transition: .3s; }
+      .container .lista .card img:hover {
+        transform: scale(1.05); }
+      .container .lista .card h4 {
+        color: #326ecf;
+        background-color: #ffffff;
+        text-transform: capitalize; }
+      .container .lista .card button {
+        cursor: pointer;
+        height: 2rem;
+        width: 100%;
+        border: unset;
+        background-color: #e44400; }
+
 /* media queries */
 @media (max-width: 768px) {
   header nav {
